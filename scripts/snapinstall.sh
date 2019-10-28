@@ -6,6 +6,8 @@ echo "# Installing Snaps softwares"
 echo "#############################"
 echo ""
 
+sudo apt install -y snapd
+
 ## Instalando pacotes Snap ##
 sudo snap install slack --classic &&  
 sudo snap install skype --classic &&  
