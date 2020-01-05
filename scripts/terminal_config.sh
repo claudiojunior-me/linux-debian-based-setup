@@ -36,7 +36,11 @@ echo "## Cloning aliases"
 cd ~/.zsh && git clone https://gist.github.com/a4d3d551978e44e612f5dcd496208691.git
 sudo mv ~/.zsh/a4d3d551978e44e612f5dcd496208691/aliases.zsh ~/.zsh/
 sudo rm -rf ~/.zsh/a4d3d551978e44e612f5dcd496208691
+echo "source $HOME/.zsh/aliases.zsh" >> ~/.zshrc
 
-echo "## Reload .zshrc"
+echo "Making ZSH default shell"
+chsh -s $(which zsh)
+
+echo "## Reloading .zshrc..."
 cd ~/
 source ~/.zshrc
